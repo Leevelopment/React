@@ -25,3 +25,9 @@ h1 {
 .mt-4 {
   margin-top: 16px;
 }
+
+/* 캘린더 양쪽 화살표 안보이도록 */
+.react-calendar__navigation__prev2-button,
+.react-calendar__navigation__next2-button {
+  display: none;
+}
