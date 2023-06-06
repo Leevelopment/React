@@ -124,41 +124,51 @@ function App() {
 
   return (
     <div className="app">
-      <div className="player-container">
-        <MusicPlayer />
-      </div>
-      <div className="weather-container">
-        <WeatherDisplay />
-      </div>
-
-      <div className="content-container">
-        <div className="paraphrase">
-          <p>Time is Gold</p>
+      <p className="app-title">
+        App Name
+      </p>
+      <div className="app-contents">
+        <div className="player-container">
+          <MusicPlayer />
         </div>
-        <div className="calendar-container">
-          <TaskCalendar
-            date={date}
-            handleDateChange={handleDateChange}
-            tasks={taskList}
-          />
-          <TaskForm
-            taskDetails={taskDetails}
-            handleInputChange={handleInputChange}
-            handleSubmit={handleSubmit}
-          />
+        <div className="weather-container">
+          <WeatherDisplay />
         </div>
-      </div>
 
-      <div className="notepad-container">
-        <Notepad />
-      </div>
+        <div className="app-task-container">
+          <div className="app-calendar-container">
+            <div className="app-calendar">
+              <div className="app-calendar-header">
+                <p className="paraphrase">Time is Gold</p>
+                <div className="app-task-list">
+                  <TaskListModal tasks={taskList} />
+                </div>
+              </div>
+              <div>
+                <TaskCalendar
+                  date={date}
+                  handleDateChange={handleDateChange}
+                  tasks={taskList}
+                />
+              </div>
+            </div>
+          </div>
+          <div className="app-task-form">
+            <TaskForm
+              taskDetails={taskDetails}
+              handleInputChange={handleInputChange}
+              handleSubmit={handleSubmit}
+            />
+          </div>
+        </div>
 
-      <div className="mt-4">
-        <TaskListModal tasks={taskList} />
-      </div>
+        <div className="notepad-container">
+          <Notepad />
+        </div>
 
-      <div className="mt-4">
-        <TaskList date={date} tasks={taskList} />
+        <div className="mt-4">
+          <TaskList date={date} tasks={taskList} />
+        </div>
       </div>
     </div>
   );
