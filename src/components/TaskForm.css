@@ -1,0 +1,43 @@
+/* TaskForm.css */
+
+.task-form {
+  background-color: #fff;
+  border: 4px solid #000;
+  border-radius: 4px;
+  padding: 20px;
+  min-width: 400px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.input-container {
+  display: flex;
+}
+
+.input-container input {
+  flex: 1;
+  padding: 8px;
+  border: none;
+  resize: none;
+  background-color: #f2f2f2;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+}
+
+.submit-button {
+  background-color: #808080;
+  border: none;
+  color: #fff;
+  padding: 4px 8px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.submit-icon {
+  vertical-align: middle;
+}
+
+.submit-button:hover {
+  background-color: #000;
+}
