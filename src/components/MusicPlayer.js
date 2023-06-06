@@ -1,46 +1,14 @@
-import React, { useState, useRef } from "react";
+import React from "react";
+import audioFile from '../assets/music.mp3'
 
+// audio file이 src 내부에 위치해야 함
 const MusicPlayer = () => {
-  const [isPlaying, setIsPlaying] = useState(false);
-  const audioRef = useRef(null);
-  const isReadyToPlay = useRef(false);
-
-  const handlePlayPause = () => {
-    if (!isReadyToPlay.current) {
-      return;
-    }
-
-    if (isPlaying) {
-      audioRef.current.pause();
-    } else {
-      audioRef.current.play();
-    }
-
-    setIsPlaying(!isPlaying);
-  };
-
-  const handleCanPlay = () => {
-    isReadyToPlay.current = true;
-    if (isPlaying) {
-      audioRef.current.play();
-    }
-  };
-
   return (
     <div>
-      <audio ref={audioRef} onCanPlay={handleCanPlay}>
-        <source
-          src={process.env.PUBLIC_URL + "/Assets/Music/lofi01.mp3"}
-          type="audio/mpeg"
-        />
+      <audio autoPlay controls>
+        <source src={audioFile} type="audio/mpeg"/>
         Your browser does not support the audio element.
       </audio>
-
-      {isPlaying ? (
-        <button onClick={handlePlayPause}>Pause</button>
-      ) : (
-        <button onClick={handlePlayPause}>Play</button>
-      )}
     </div>
   );
 };

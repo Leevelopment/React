@@ -5,7 +5,7 @@ import TaskCalendar from "./components/TaskCalendar";
 import TaskList from "./components/TaskList";
 import TaskListModal from "./components/TaskListModal";
 import Notepad from "./components/Notepad";
-// import MusicPlayer from "./components/MusicPlayer";
+import MusicPlayer from "./components/MusicPlayer";
 import WeatherDisplay from "./components/WeatherDisplay";
 import "./App.css";
 
@@ -124,9 +124,9 @@ function App() {
 
   return (
     <div className="app">
-      {/* <div className="player-container">
+      <div className="player-container">
         <MusicPlayer />
-      </div> */}
+      </div>
       <div className="weather-container">
         <WeatherDisplay />
       </div>
