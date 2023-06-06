@@ -11,7 +11,7 @@ function TaskForm({ taskDetails, handleInputChange, handleSubmit }) {
           name="task"
           value={taskDetails.task}
           onChange={handleInputChange}
-          placeholder="Enter task in format: '7일 15시 /학교 교수 면담'"
+          placeholder="Enter task in format: '7일 15시 /학교 교수님 면담'"
           required
         />
         <button type="submit" className="submit-button">
